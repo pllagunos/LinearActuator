@@ -2,7 +2,7 @@
 
 A 3D-printed linear actuator project using a NEMA 17 stepper motor and a custom Arduino-based controller. This project was originally designed to automatically open and close the main chimney flue on a large industrial kiln. It is inspired by the robust and precise mechanics of 3D printers.
 
-![alt text](assets\LinearActuator.png)
+![alt text](https://github.com/pllagunos/LinearActuator/blob/main/assets/LinearActuator.png)
 
 ## 🌟 Features
 * **Precise Control:** Uses a NEMA 17 stepper motor and A4988 driver for accurate positioning.
@@ -70,7 +70,7 @@ Before operating the motor, you **must** set the maximum current limit on the A4
     * Place the positive probe on the metal top of the potentiometer.
     * Carefully turn the potentiometer until the multimeter reads your target `Vref` (e.g., 0.8V).
 
-![alt text](assets\vref.png)
+![alt text](https://github.com/pllagunos/LinearActuator/blob/main/assets/vref.png)
 
 ## 🚀 Code
 The Arduino code is located in the `Chimenea_Botones_v2.ino` file. It uses the `AccelStepper` library for motor control.
