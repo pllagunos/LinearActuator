@@ -83,10 +83,10 @@ A special thank you to my friends **[Ricardo Rosas](https://github.com/RicardoRo
 ## ✅ To-Do List
 - [x] Create initial detailed README
 - [x] Upload Gerber files and a detailed BOM for the PCB
+- [x] Add hardware license
 - [ ] Convert necessary solidwork parts to STL files
-- [ ] Add hardware license
 
 ## 📄 License
 This project uses a dual-license model:
-* **Software:** All source code is licensed under the **MIT License**.
-* **Hardware:** All hardware design files (CAD, STL, PCB) are licensed under the **_?_ license**.
+* **Software:** All source code is licensed under the **MIT License**. See the `LICENSE` file for details.
+* **Hardware:** All hardware design files (schematics, PCB, CAD models, and STL files) are licensed under the **Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0)**. See the `LICENSE-HARDWARE.md` file for details.
