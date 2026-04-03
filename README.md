@@ -4,14 +4,14 @@ A 3D-printed linear actuator project using a NEMA 17 stepper motor and a custom 
 
 ![alt text](https://github.com/pllagunos/LinearActuator/blob/main/assets/LinearActuator.png)
 
-## 🌟 Features
+## Features
 * **Precise Control:** Uses a NEMA 17 stepper motor and A4988 driver for accurate positioning.
 * **Custom PCB:** Includes a custom-designed PCB for a clean and reliable control circuit.
 * **Robust Materials:** Designed with parts printed in Carbon Fiber PETG for strength and PLA for enclosures.
 * **End-Stops:** Incorporates limit switches for homing and safe operation.
 * **Expandable:** The controller includes a header for an ESP32, allowing for future Wi-Fi or IoT integration.
 
-## 🛠️ Bill of Materials (BOM)
+## Bill of Materials (BOM)
 
 ### Electronics
 | Part                  | Quantity | Notes                                    |
@@ -40,9 +40,9 @@ A 3D-printed linear actuator project using a NEMA 17 stepper motor and a custom 
 | Controller Enclosure  | PLA      | |
 
 
-## 🔌 Wiring & Assembly
+## Wiring & Assembly
 
-### Mechanical Assembly
+### Mechanical
 The mechanical structure can be assembled by following the SolidWorks design files located in the `/hardware/Mechanical/solidworks/` directory. The main assembly file is `Ensamblaje2_v3.SLDASM`.
 
 ### Controller and Wiring
@@ -50,11 +50,11 @@ The electronics are centered around a custom PCB. Please refer to the schematic 
 
 ![alt text](assets/Schematic_Chimney-Controller.png)
 
-**Important:** It is highly recommended to use shielded cables (e.g., FTP) for all connections to the controller to prevent electromagnetic interference (EMI), especially in an industrial environment.
+**Important:** It is highly recommended to use shielded cables (e.g., FTP) for all connections to the controller to prevent electromagnetic interference, especially near mains power lines.
 
 ![alt text](assets/controller.png)
 
-## ⚙️ A4988 Driver Setup (Crucial Step!)
+## A4988 Driver Setup (Crucial Step!)
 Before operating the motor, you **must** set the maximum current limit on the A4988 driver to protect the motor. This is done by adjusting the reference voltage (`Vref`) on the small potentiometer on the driver board.
 
 1.  **Calculate `Vref`**: The formula is `Vref = I_max * 8 * R_sense`.
@@ -72,12 +72,14 @@ Before operating the motor, you **must** set the maximum current limit on the A4
 
 ![alt text](https://github.com/pllagunos/LinearActuator/blob/main/assets/vref.png)
 
-## 🚀 Code
+## Code
 The Arduino code is located in the `Chimenea_Botones_v2.ino` file. It uses the `AccelStepper` library for motor control.
 
 The main `loop()` function continuously checks for input from the push buttons or an external signal (originally from an ESP32) and calls the appropriate functions to move the motor.
 
-## 🙏 Acknowledgements
+It is a very simple program but serves as a minimal example on how to use the actuator.
+
+## Acknowledgements
 A special thank you to my friends **[Ricardo Rosas](https://github.com/RicardoRosasE) and [Gilberto Juarez](https://github.com/GJRangel)**, who were instrumental in the build - specially the mechanical design. This project would not have been possible without their help.
 
 ## ✅ To-Do List
@@ -86,7 +88,7 @@ A special thank you to my friends **[Ricardo Rosas](https://github.com/RicardoRo
 - [x] Add hardware license
 - [ ] Convert necessary solidwork parts to STL files
 
-## 📄 License
+## License
 This project uses a dual-license model:
 * **Software:** All source code is licensed under the **MIT License**. See the `LICENSE` file for details.
 * **Hardware:** All hardware design files (schematics, PCB, CAD models, and STL files) are licensed under the **Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0)**. See the `LICENSE-HARDWARE.md` file for details.
